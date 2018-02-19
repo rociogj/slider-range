@@ -6,7 +6,7 @@ class SliderNumber extends Component {
     const value = this.props.value
     
     return (
-      <p>{value}</p>
+      <p className="slider-range__number col">{value}</p> 
     );
   }
 }

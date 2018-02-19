@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Styles/Slider.css';
 import SliderInput from './SliderInput';
 import SliderNumber from './SliderNumber';
 
@@ -17,7 +16,7 @@ class Slider extends Component {
     const value = this.state.value
 
     return (
-      <div className="slider">
+      <div className="slider-range row">
         <SliderInput onChangeValue={this.updateValue} value={value} />
         <SliderNumber value={value} />
       </div>

@@ -1,0 +1,49 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html,
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+//
+// Layout and grid
+//
+.wrapper,
+%wrapper {
+  width: 100%;
+  max-width: $max-width;
+  padding: 50px 48px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  @include prefixer(display, flex, [webkit, moz, ms, o]);
+  @include prefixer(align-items, center, [webkit, moz, ms, o]);
+}
+
+.col {
+  width: auto;
+  display: inline-flex;
+  @include prefixer(display, inline-flex, [webkit, moz, ms, o]);
+  @include prefixer(align-items, center, [webkit, moz, ms, o]);
+}
+
+
+//
+// Mobile
+//
+@include media($mobile) {
+  .wrapper,
+  %wrapper {
+    padding: 0 8px;
+  }
+
+}
