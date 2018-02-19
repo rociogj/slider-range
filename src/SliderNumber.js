@@ -4,9 +4,13 @@ class SliderNumber extends Component {
 
   render() {
     const value = this.props.value
+    const onChangeValue = this.props.onChangeValue
     
     return (
-      <p className="slider-range__number col">{value}</p> 
+      <div className="slider-range__number col">
+        <label className="hidden" for="slider-range-number">Input range text</label>
+        <input className="slider-range__number-input" type="text" name="slider-range-number" id="slider-range-number" value={value} onChange={(event) => onChangeValue(event.target.value)} tabindex="0"/>
+      </div>
     );
   }
 }

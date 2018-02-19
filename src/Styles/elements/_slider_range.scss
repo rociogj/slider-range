@@ -22,6 +22,7 @@
       background: $c_secondary;
       @include prefixer(transition, [opacity $transition], [webkit, moz, ms, o]);
       @include prefixer(appearance, none, [webkit, moz, ms, o]);
+      display: block;
 
       &::-webkit-slider-thumb {
         width: 24px;
@@ -32,6 +33,7 @@
         cursor: pointer;
         position: relative;
         z-index: 1;
+        
       }
       &::-moz-range-thumb {
         width: 24px;
@@ -57,14 +59,18 @@
   }
 
   &__number {
-    width: 42px;
-    padding: 8px 0 7px;
-    background-color: $c_primary;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    color: #fff;
-    @include prefixer(border-radius, 2px, [webkit, moz, ms, o]);
-    @include prefixer(justify-content, center, [webkit, moz, ms, o]);
+    &-input {
+      width: 42px;
+      padding: 8px 0 7px;
+      background-color: $c_primary;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      color: #fff;
+      border: 0;
+      text-align: center;
+      @include prefixer(border-radius, 2px, [webkit, moz, ms, o]);
+      @include prefixer(justify-content, center, [webkit, moz, ms, o]);
+    }
   }
 }

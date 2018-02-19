@@ -4,9 +4,11 @@ import Slider from './Slider';
 class App extends Component {
   render() {
     return (
-      <div className="App wrapper">
-        <p>Slider label</p>
-        <Slider />        
+      <div className="App" role="main">
+        <div class="wrapper">
+          <h1 className="title">Slider label</h1>
+          <Slider />        
+        </div>
       </div>
     );
   }

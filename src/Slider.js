@@ -18,7 +18,7 @@ class Slider extends Component {
     return (
       <div className="slider-range row">
         <SliderInput onChangeValue={this.updateValue} value={value} />
-        <SliderNumber value={value} />
+        <SliderNumber onChangeValue={this.updateValue} value={value} />
       </div>
     );
   }

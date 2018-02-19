@@ -10,7 +10,8 @@ class SliderInput extends Component {
       <div className="slider-range__input col">
         <span className="slider-range__val slider-range__min col">0</span>
         <div className="slider-range__bar col">
-          <input className="slider-range__bar-input" type="range" min="0" max="100" value={value} onChange={(event) => onChangeValue(event.target.value)}/>
+          <label className="hidden" for="slider-range-input">Input range bar</label>
+          <input className="slider-range__bar-input" type="range" min="0" max="100" name="slider-range-input" id="slider-range-input" aria-valuemin="1" aria-valuemax="100" aria-valuenow={value} value={value} onChange={(event) => onChangeValue(event.target.value)} tabindex="0" role="slider"/>
           <span className="slider-range__bar-val" style={{ width: value + '%' }} aria-hidden="true"></span>
         </div>
         <span className="slider-range__val slider-range__max col">100</span>
