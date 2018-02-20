@@ -1,6 +1,5 @@
 ###### Installing
 > First make sure you have node.js and npm installed.
-
 > In the project directory, you can run:
 
 ```
