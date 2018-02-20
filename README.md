@@ -17,4 +17,11 @@ npm start
 npm run build 
 ```
 
+```
+serve -s build
+```
+
+> Open http://localhost:5000 to view it in the browser.
+
+
 ---
